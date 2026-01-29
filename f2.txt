@@ -1,1 +1,110 @@
-thsi is second fiel
+Q1
+
+git init
+echo "hi" > f1.txt
+echo "hi hello" > f2.txt
+git add f1.txt
+git status
+git commit -m"file f1 is commited"
+git status
+git add .
+git status
+git commit -m"all file is commited"
+touch index.html .gitignore error.log
+git add .
+git status
+git commit -m"commit all files except error.log"
+git log
+history -a
+
+Q2
+
+git init
+echo "hii" > f1.txt
+git add .
+git status
+git commit -m"commited f1 file"
+git checkout -b mybranch
+ls
+nano f1.txt
+git add .
+git status
+git commit -m" f1 is modified"
+git checkout master
+nano f1.txt
+git add .
+git status
+git commit -m" f1 is modified"
+git merge mybranch
+nano f1.txt
+git add .
+git commit -m"resolved conflicts"
+git log --oneline
+history -a
+
+q3
+
+git config --global user.name "Raj-24680"
+git config --global user.email rrrj24680@gmail.com
+git clone https://github.com/Raj-24680/git-lab-demo2.git
+cd git-lab-demo2
+echo "this is first comment" > f1.txt
+git status
+git add .
+git commit -m "add main.py"
+git push origin main
+Make a small change directly on GitHub (edit README.md online, e.g., add “Updated via 
+GitHub”). 
+
+git pull origin main
+
+q4
+Create a New Repository on GitHub
+git clone https://github.com/Raj-24680/pullrequest.git
+cd pullrequest
+nano files1.txt
+git add .
+git commit -m "inital commit"
+git push origin main
+git pull origin main
+git branch feature-1
+git checkout feature-1
+echo "modified content" >> files1.txt
+nano files2.txt
+git add .
+git commit -m "new file"
+git push origin feature-1
+ Create Pull Request (GitHub UI) 
+ 1. Open GitHub repository 
+ 2. Click Compare & Pull Request 
+ 3. Base branch → main 
+ 4. Compare branch → feature-1 
+ 5. Add description 
+ 6. Click Create Pull Request
+ 7. Click Merge Pull Request 
+git checkout main
+git pull origin main
+git log --oneline
+git branch -d feature-1
+git push origin --delete feature-1 
+
+
+
+git clone https://github.com/Raj-24680/tagging.git
+cd tagging
+git pull
+git tag v1.0
+git tag
+git tag -a v1.2 -m “v1.2 Created”
+git tag 
+git show v1.0 
+git tag -l “v1.*”
+git push origin v1.0
+git tag v2.0
+git push --tags 
+git tag -d v1.0
+git push origin -d v1.0 
+
+
+
+

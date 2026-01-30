@@ -20,7 +20,7 @@ public class java1 {
 
     public static void main(String[] args) {
         int[] nums = {2, 4, 7, 10, 15, 20};
-        System.out.println(binarySearch(nums, 4)); // Output: 3
+        System.out.println(binarySearch(nums, 15)); // Output: 3
     }
 }
 
